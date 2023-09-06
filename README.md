@@ -37,3 +37,12 @@ float_events = np.load('my_events.npy')
 events = unstructured_to_structured(
     float_events[:, (0, 1, 3, 2)], dtype=np.dtype([('x', 'u2'), ('y', 'u2'), ('p', 'i1'), ('t', 'i4')]))
 ```
+
+# Example
+
+There is a example program to read events and generate frames from it in ``examples/recon_frames.py``.
+Before running it, ``export PYTHONPATH=/path_to_build_directory:${PYTHONPATH}``
+
+# License
+
+This software is issued under the Apache License Version 2.0.

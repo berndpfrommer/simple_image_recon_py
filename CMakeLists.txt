@@ -26,7 +26,7 @@ find_package(pybind11)
 
 # simple_image_recon_lib must have been copied in beforehand
 add_subdirectory(simple_image_recon_lib)
-find_package(simple_image_recon_lib CONFIG)
+# find_package(simple_image_recon_lib REQUIRED)
 
 pybind11_add_module(_simple_image_recon SHARED src/simple_image_recon.cpp)
 target_link_libraries(_simple_image_recon PUBLIC simple_image_recon_lib pybind11::pybind11)
